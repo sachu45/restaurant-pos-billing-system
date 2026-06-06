@@ -1,318 +1,184 @@
-# restaurant-pos-billing-system
-A Python Tkinter-based Restaurant POS Billing System with order management, PDF invoice generation, receipt printing, and real-time billing.
+# Restaurant POS Billing System
 
-This application allows restaurant staff to quickly create customer orders, generate bills, print receipts, and export invoices as PDF files.
+A desktop-based Restaurant Point of Sale (POS) and Billing System developed using Python and Tkinter. The application helps restaurant staff manage customer orders, calculate bills automatically, generate PDF invoices, and print receipts through a simple graphical interface.
 
----
+## About the Project
 
-## 📌 Features
+This project was built to understand how restaurant billing systems work in real-world environments. The application allows users to select food items from different menu categories, generate customer bills, calculate taxes automatically, and save invoices as PDF files.
 
-### 🍴 Menu Management
-- South Indian Menu
-- Dosa Grill Menu
-- Uthappam Menu
-- Meals Section
-- Chinese Appetizers
-- Chinese Wok
-- Curry Pot
-- Freshly Tandoor Bread
+The system provides a clean and user-friendly interface that makes billing faster and reduces manual calculations.
 
-### 🛒 Order Processing
-- Add items with one click
-- Automatic quantity updates
-- Real-time receipt preview
-- Dynamic bill calculation
+## Features
 
-### 💰 Billing System
-- Automatic subtotal calculation
-- 5% GST/Tax calculation
-- Grand total generation
-- Date & Time stamping
+### Menu Management
 
-### 📄 PDF Invoice
-- Export customer bills as PDF
-- Auto-save generated invoices
-- Professional bill format
+* Categorized food menu
+* South Indian dishes
+* Dosa varieties
+* Uthappam varieties
+* Meals section
+* Chinese dishes
+* Curry selections
+* Tandoor bread items
 
-### 🖨️ Printing Support
-- Windows printing support
-- Linux printing support
-- macOS printing support
+### Order Management
 
-### ⏰ Live Clock
-- Real-time clock display
-- Current date and time updates every second
+* Add items with a single click
+* Automatic quantity updates
+* Real-time order tracking
+* Live receipt preview
+* Multiple item billing
 
-### 🧹 Order Management
-- Clear current order
-- Start new customer billing instantly
+### Billing System
 
----
+* Automatic bill generation
+* Subtotal calculation
+* GST calculation (5%)
+* Grand total calculation
+* Date and time stamping
 
-## 📸 Application Preview
+### PDF Invoice Generation
 
-### Main Interface
+* Generate customer invoices as PDF files
+* Automatically save bills locally
+* Printable invoice format
 
-- Category Selection Panel
-- Menu Items Display
-- Receipt Preview Window
-- Billing Controls
+### Receipt Printing
 
-```
-+------------------+----------------------+----------------+
-| Categories       | Menu Items           | Receipt        |
-|------------------|----------------------|----------------|
-| South Indian     | Idli                 | Order Preview  |
-| Dosa Grill       | Masala Dosa          | Total Amount   |
-| Uthappam         | Ghee Roast           | GST            |
-| Meals            | Fried Rice           | Grand Total    |
-+------------------+----------------------+----------------+
-```
+* Print customer bills directly
+* Supports Windows, Linux, and macOS
 
----
+### User Interface
 
-## 🏗️ Project Structure
+* Category-based navigation
+* Dynamic menu display
+* Live receipt window
+* Simple and easy-to-use layout
+* Real-time clock display
 
-```bash
-Restaurant-POS/
+## Technologies Used
+
+* Python
+* Tkinter
+* ReportLab
+* Datetime Module
+* OS Module
+* Tempfile Module
+
+## Project Structure
+
+```text
+Restaurant-POS-Billing-System/
 │
 ├── Restaurant_pos.py
 ├── README.md
 ├── requirements.txt
-├── screenshots/
-│   ├── home.png
-│   ├── billing.png
-│   └── receipt.png
+├── .gitignore
 │
-└── generated_bills/
+└── screenshots/
+    ├── dashboard.png
+    ├── order_page.png
+    └── bill_preview.png
 ```
 
----
+## Installation
 
-## ⚙️ Technologies Used
-
-| Technology | Purpose |
-|------------|----------|
-| Python | Core Programming |
-| Tkinter | GUI Development |
-| ReportLab | PDF Generation |
-| Datetime | Date & Time |
-| OS Module | File Handling |
-| Tempfile | Temporary Printing Files |
-
----
-
-## 🚀 Installation
-
-### 1. Clone Repository
+Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/restaurant-pos.git
+git clone https://github.com/sachu45/restaurant-pos-billing-system.git
 ```
 
-### 2. Move Into Project
+Move into the project folder:
 
 ```bash
-cd restaurant-pos
+cd restaurant-pos-billing-system
 ```
 
-### 3. Install Dependencies
+Install the required package:
 
 ```bash
 pip install reportlab
 ```
 
-### 4. Run Application
+Run the application:
 
 ```bash
 python Restaurant_pos.py
 ```
 
----
+## Requirements
 
-## 📦 Requirements
-
-Create a file named:
-
-### requirements.txt
+Create a requirements.txt file:
 
 ```txt
 reportlab
 ```
 
-Install:
+Install all dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
----
+## How the System Works
 
-## 🔄 Workflow
+1. Launch the application.
+2. Select a food category from the left panel.
+3. Click menu items to add them to the order.
+4. Review the live receipt preview.
+5. Click **Generate Bill**.
+6. The application calculates GST and total amount automatically.
+7. A PDF invoice is generated and saved.
+8. Print the bill if required.
 
-### Step 1
-Select a category from the left panel.
+## Sample Workflow
 
-### Step 2
-Click menu items to add them to the customer's order.
+* Customer orders Masala Dosa and Idli.
+* Items are added to the receipt window.
+* The system calculates the subtotal.
+* GST is applied automatically.
+* Final bill is displayed.
+* PDF invoice is generated.
+* Receipt can be printed directly.
 
-### Step 3
-Review the live receipt preview.
+## What I Learned
 
-### Step 4
-Click:
+While developing this project, I learned:
 
-- Generate Bill
+* GUI development using Tkinter
+* Event-driven programming
+* Working with dictionaries and data structures
+* PDF generation using ReportLab
+* File handling in Python
+* Receipt and billing system design
+* Desktop application development
 
-System calculates:
-- Subtotal
-- GST (5%)
-- Grand Total
+## Future Improvements
 
-### Step 5
-Invoice PDF is automatically generated.
+Some features that can be added in future versions:
 
-### Step 6
-Print receipt using the Done button.
+* Customer database
+* SQLite integration
+* Admin login system
+* Inventory management
+* Sales analytics dashboard
+* QR code payments
+* UPI payment integration
+* Daily sales reports
+* Multi-user support
+* Cloud backup support
 
----
-
-## 🧾 Sample Receipt
-
-```txt
-Restaurant
-Anna Nagar, Lalgudi - 621651
-
---------------------------------
-Item              Qty   Amount
---------------------------------
-Masala Dosa       x2    ₹238
-Idli              x1    ₹38
-
-Tax (5%)          ₹13.80
-
-Total             ₹289.80
-
-Thank you!
-Visit Again
-```
-
----
-
-## 🎯 Key Functionalities
-
-### Order Management
-
-```python
-add_to_order()
-```
-
-Adds selected menu item.
-
-### Receipt Preview
-
-```python
-update_receipt_preview()
-```
-
-Updates live bill view.
-
-### Bill Generation
-
-```python
-generate_bill()
-```
-
-Calculates GST and final amount.
-
-### PDF Export
-
-```python
-save_pdf()
-```
-
-Generates invoice PDF.
-
-### Receipt Printing
-
-```python
-print_bill()
-```
-
-Prints bill across operating systems.
-
----
-
-## 🌟 Future Enhancements
-
-### Database Integration
-- SQLite
-- MySQL
-
-### Authentication
-- Admin Login
-- Staff Login
-
-### Dashboard
-- Daily Sales
-- Monthly Reports
-- Revenue Analytics
-
-### Customer Features
-- Customer Database
-- Loyalty Points
-- Order History
-
-### Inventory Management
-- Stock Tracking
-- Low Stock Alerts
-
-### Cloud Support
-- Online Backup
-- Multi-Branch Access
-
-### QR Billing
-- UPI Payments
-- QR Invoice Generation
-
----
-
-## 🛡️ Error Handling
-
-Current application handles:
-
-- Empty Orders
-- PDF Generation
-- Cross-platform Printing
-- File Creation
-
----
-
-## 👨‍💻 Author
+## Author
 
 **Sarrvesh J R**
 
-- GitHub: https://github.com/sachu45
-- LinkedIn: https://www.linkedin.com/in/sarrvesh-jr
+GitHub:
+https://github.com/sachu45
 
----
+LinkedIn:
+https://www.linkedin.com/in/sarrvesh-jr
 
-## 📜 License
+## License
 
-This project is open-source and available under the MIT License.
-
----
-
-## ⭐ Support
-
-If you like this project:
-
-⭐ Star the repository
-
-🍴 Fork the project
-
-📢 Share it with others
-
----
-
-### Made with ❤️ using Python & Tkinter
+This project is available for educational and learning purposes.
